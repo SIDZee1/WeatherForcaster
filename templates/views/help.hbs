@@ -6,15 +6,27 @@
     <title>Help page</title>
     <link rel="icon" href= "/img/weather.png">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap" rel="stylesheet"> 
 
 </head>
     
 <body>
     <div class= "main-content">
+     {{>header}}
+     <div class="about">
+         To get weather report of the prefered location: <br><br>
+        First put your location in the search bar & click on the serach button<br>
+        Then weather report of the location will display below.<br>
+        In case of any errors check your mentioned location weather it is correct or not.
+        Or check your network connection.
 
-        {{>header}}
+     </div>
+   
     </div>
-    {{>footer}}
+     {{>footer}}
+    
 
 </body>
 

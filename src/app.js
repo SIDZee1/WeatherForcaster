@@ -23,7 +23,7 @@ app.use(express.static(publicDirPath))
   
 app.get('', (req,res)=>{
     res.render('index',{
-        title:'Weather App',
+        title:'Weather Lens',
         name:'Zeeshan Siddiqui'
     })
 })
@@ -84,12 +84,6 @@ app.get('*',(req,res)=>{
 
 })
 
-// 
-
-
-// app.com
-// app.com/help
-// app.com/about
 
 app.listen(port, ()=>{
     console.log('setting up server on port'+ port)

@@ -9,11 +9,16 @@ const forecast = ( latitude,longitude,callback)=>{
         } else if(response.body.error){
             callback('location not found', undefined)
         } else{
-            callback(undefined, 'It is currently '+ response.body.current.temperature + ' degree out . It feels like '+ response.body.current.feelslike +' degree out' + ' with visiblity '+response.body.current.visibility )
+            callback(undefined, {
+                temperature:response.body.current.temperature+ ' °C' ,
+                windspeed:'Wind Speed: '+response.body.current.wind_speed+ ' km/hr',
+                humidity:'Humidity: '+response.body.current.humidity,
+                description:response.body.current.weather_descriptions[0]
+
+            })
+            
         }
 
     })
 }
-
-
 module.exports = forecast
